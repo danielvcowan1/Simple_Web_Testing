@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<table>
+	<tr>
+		<%for i in (table_size-1).downto(0)%>
+			<th><%=i%></th>
+		<%end%>
+		<th>AND</th>
+		<th>OR</th>
+		<th>NAND</th>
+		<th>NOR</th>
+		<th>SINGLE</th>
+		<th>XOR</th>
+	</tr>
+	<%for r in 0..(2**(table_size)-1)%>
+		<tr>
+			<%for c in 0..(table_size-1+6)%>
+				<td><%=t_table[r][c]%></td>
+			<%end%>
+		</tr>
+	<%end%>
+</table>
+<a href="/">Back to main</a>
+</body>
+</html>
